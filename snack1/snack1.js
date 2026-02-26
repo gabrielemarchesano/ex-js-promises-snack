@@ -10,5 +10,8 @@ const id = 1;
 
 fetch(`https://dummyjson.com/posts/${id}`)
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => {
+    console.log(data)
+    console.log(`Titolo: ${data.title}`)
+  })
   .catch(error => console.error(error));
